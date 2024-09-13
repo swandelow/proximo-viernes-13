@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+.days {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.next-friday {
+    font-size: 14px;
+}
