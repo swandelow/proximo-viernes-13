@@ -1,0 +1,21 @@
+{
+  "name": "Próximo Viernes 13",
+  "short_name": "Viernes 13",
+  "description": "Cuenta regresiva para el próximo viernes 13",
+  "start_url": "/proximo-viernes-13/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ff0000",
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

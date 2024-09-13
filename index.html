@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Próximo Viernes 13</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff0000">
 </head>
 <body>
     <div class="container">
@@ -17,5 +19,12 @@
         <img id="jasonGif" src="dancing-jason.gif" alt="Dancing Jason" class="jason-gif hidden">
     </div>
     <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/proximo-viernes-13/sw.js')
+                .then(registration => console.log('Service Worker registrado'))
+                .catch(error => console.log('Error al registrar el Service Worker:', error));
+        }
+    </script>
 </body>
 </html>
