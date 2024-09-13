@@ -31,9 +31,10 @@ body {
     color: #ffffff;
 }
 
-.jason-gif {
-    max-width: 100%;
+.jason-image {
+    width: 250px; /* o el tamaño que prefieras */
     height: auto;
+    margin-bottom: 20px;
     border: 2px solid #ff0000;
     box-shadow: 0 0 10px #ff0000;
 }

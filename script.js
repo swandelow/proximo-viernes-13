@@ -31,15 +31,18 @@ function updateCountdown() {
     const title = document.getElementById('title');
     const content = document.getElementById('content');
     const jasonGif = document.getElementById('jasonGif');
+    const jasonImage = document.getElementById('jasonImage');
 
     if (isFriday13(startDate)) {
         title.textContent = "¡Feliz viernes 13!";
         content.classList.add('hidden');
         jasonGif.classList.remove('hidden');
+        jasonImage.classList.add('hidden');
     } else {
         title.textContent = "";
         content.classList.remove('hidden');
         jasonGif.classList.add('hidden');
+        jasonImage.classList.remove('hidden');
 
         const nextFriday13 = getNextFriday13(startDate);
         const timeDiff = nextFriday13.getTime() - startDate.getTime();
