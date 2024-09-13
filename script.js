@@ -11,11 +11,15 @@ function getStartDate() {
     return new Date();
 }
 
+function isFriday13(date) {
+    return date.getDay() === 5 && date.getDate() === 13;
+}
+
 function getNextFriday13(startDate) {
     let date = new Date(startDate);
     
     while (true) {
-        if (date.getDay() === 5 && date.getDate() === 13) {
+        if (isFriday13(date)) {
             return date;
         }
         date.setDate(date.getDate() + 1);
@@ -24,18 +28,32 @@ function getNextFriday13(startDate) {
 
 function updateCountdown() {
     const startDate = getStartDate();
-    const nextFriday13 = getNextFriday13(startDate);
-    const timeDiff = nextFriday13.getTime() - startDate.getTime();
-    const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    const title = document.getElementById('title');
+    const content = document.getElementById('content');
+    const jasonGif = document.getElementById('jasonGif');
 
-    document.getElementById('days').textContent = `Faltan ${daysDiff} días para el próximo viernes 13`;
-    
-    const formattedDate = nextFriday13.toLocaleDateString('es-ES', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    });
-    document.getElementById('nextFriday13').textContent = `Fecha: ${formattedDate}`;
+    if (isFriday13(startDate)) {
+        title.textContent = "¡Feliz viernes 13!";
+        content.classList.add('hidden');
+        jasonGif.classList.remove('hidden');
+    } else {
+        title.textContent = "";
+        content.classList.remove('hidden');
+        jasonGif.classList.add('hidden');
+
+        const nextFriday13 = getNextFriday13(startDate);
+        const timeDiff = nextFriday13.getTime() - startDate.getTime();
+        const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+        document.getElementById('days').textContent = `Faltan ${daysDiff} días para el próximo viernes 13`;
+        
+        const formattedDate = nextFriday13.toLocaleDateString('es-ES', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        });
+        document.getElementById('nextFriday13').textContent = `Fecha: ${formattedDate}`;
+    }
 }
 
 updateCountdown();

@@ -12,6 +12,11 @@ body {
     text-align: center;
 }
 
+.title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
 .days {
     font-size: 24px;
     margin-bottom: 10px;
@@ -19,4 +24,13 @@ body {
 
 .next-friday {
     font-size: 14px;
+}
+
+.jason-gif {
+    max-width: 100%;
+    height: auto;
+}
+
+.hidden {
+    display: none;
 }
