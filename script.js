@@ -45,7 +45,7 @@ function updateCountdown() {
         const timeDiff = nextFriday13.getTime() - startDate.getTime();
         const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
 
-        document.getElementById('days').textContent = `Faltan ${daysDiff} días para el próximo viernes 13`;
+        document.getElementById('days').textContent = daysDiff === 1 ? `Falta ${daysDiff} día para el próximo viernes 13` : `Faltan ${daysDiff} días para el próximo viernes 13`;
         
         const formattedDate = nextFriday13.toLocaleDateString('es-ES', {
             day: '2-digit',
