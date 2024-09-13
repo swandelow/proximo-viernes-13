@@ -35,7 +35,15 @@ body {
     width: 250px; /* o el tamaño que prefieras */
     height: auto;
     margin-bottom: 20px;
-    border: 2px solid #ff0000;
+    border: 1px solid #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.jason-gif {
+    width: 350px; /* o el tamaño que prefieras */
+    height: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ff0000;
     box-shadow: 0 0 10px #ff0000;
 }
 
