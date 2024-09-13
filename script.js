@@ -34,7 +34,7 @@ function updateCountdown() {
     const jasonImage = document.getElementById('jasonImage');
 
     if (isFriday13(startDate)) {
-        title.textContent = "¡Feliz viernes 13!";
+        title.textContent = "¡Feliz viernes 13 ❤️!";
         content.classList.add('hidden');
         jasonGif.classList.remove('hidden');
         jasonImage.classList.add('hidden');
