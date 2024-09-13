@@ -1,11 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', monospace;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .container {
@@ -15,20 +16,26 @@ body {
 .title {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #ff0000;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
 }
 
 .days {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #ff0000;
 }
 
 .next-friday {
     font-size: 14px;
+    color: #ffffff;
 }
 
 .jason-gif {
     max-width: 100%;
     height: auto;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 10px #ff0000;
 }
 
 .hidden {
